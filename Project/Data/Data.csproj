@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D7E3AF0-393E-4524-8AA6-11EFF72960AE}</ProjectGuid>
+    <ProjectGuid>{42297933-0B35-451E-940E-663AB539D472}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service</RootNamespace>
-    <AssemblyName>Service</AssemblyName>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,17 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
-    <Compile Include="Hostel.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{42297933-0b35-451e-940e-663ab539d472}</Project>
-      <Name>Data</Name>
-    </ProjectReference>
+    <None Include="Data\Admins.json" />
+    <None Include="Data\Students.json" />
+    <None Include="Data\Teachers.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\entities\Entities.csproj">
-      <Project>{96F17D35-2CB6-4B83-8AE9-607E32C8255E}</Project>
+      <Project>{96f17d35-2cb6-4b83-8ae9-607e32c8255e}</Project>
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>

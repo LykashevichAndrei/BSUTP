@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace Entities
 {
-    public class Class1
+    public class Teacher : Person
     {
+
     }
 }

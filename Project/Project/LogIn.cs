@@ -20,7 +20,7 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             Hide();
-            Student student = new Student();
+            StudentForm student = new StudentForm();
             student.Show();
         }
 

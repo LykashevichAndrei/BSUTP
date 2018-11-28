@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D7E3AF0-393E-4524-8AA6-11EFF72960AE}</ProjectGuid>
+    <ProjectGuid>{96F17D35-2CB6-4B83-8AE9-607E32C8255E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service</RootNamespace>
-    <AssemblyName>Service</AssemblyName>
+    <RootNamespace>entities</RootNamespace>
+    <AssemblyName>entities</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,19 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
-    <Compile Include="Hostel.cs" />
+    <Compile Include="Persons\Admin.cs" />
+    <Compile Include="Persons\Person.cs" />
+    <Compile Include="Persons\Student.cs" />
+    <Compile Include="Persons\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{42297933-0b35-451e-940e-663ab539d472}</Project>
-      <Name>Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\entities\Entities.csproj">
-      <Project>{96F17D35-2CB6-4B83-8AE9-607E32C8255E}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

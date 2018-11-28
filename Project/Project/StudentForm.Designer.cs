@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Student
+    partial class StudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,7 @@
             this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Размер стипендии";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -77,7 +78,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 47);
+            this.label5.Location = new System.Drawing.Point(12, 47);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 13);
             this.label5.TabIndex = 4;
@@ -92,7 +93,7 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "label6";
             // 
-            // Student
+            // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +104,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Student";
+            this.Name = "StudentForm";
             this.Text = "Student";
             this.ResumeLayout(false);
             this.PerformLayout();
