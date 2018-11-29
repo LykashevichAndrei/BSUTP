@@ -19,6 +19,18 @@ namespace Entities
         private double _scholarship;
         private List<int> marks;
 
+        public void AddMark(int mark)
+        {
+                marks.Add(mark);   
+        }
+        public List<int> GetMarks
+        {
+            get
+            {
+                return marks;
+            }
+        }
+
         public bool LiveInSocialBehavior
         {
             get

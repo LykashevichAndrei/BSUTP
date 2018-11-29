@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Persons\Admin.cs" />
+    <Compile Include="Persons\Discipline.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Persons\Student.cs" />
     <Compile Include="Persons\Teacher.cs" />

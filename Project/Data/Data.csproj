@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Admins.json" />
+    <None Include="Data\Disciplines.json" />
     <None Include="Data\Students.json" />
     <None Include="Data\Teachers.json" />
     <None Include="packages.config" />

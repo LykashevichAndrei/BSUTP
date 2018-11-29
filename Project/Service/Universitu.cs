@@ -55,5 +55,9 @@ namespace Service
             }
 
         }
+        public List<Student> FindStudents(string secondName)
+        {
+            return data.Students.Where(n => n.Surname == secondName).ToList();
+        }
     }
 }
