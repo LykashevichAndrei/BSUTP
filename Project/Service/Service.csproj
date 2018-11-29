@@ -44,6 +44,7 @@
     <Compile Include="Group.cs" />
     <Compile Include="Hostel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Universitu.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
