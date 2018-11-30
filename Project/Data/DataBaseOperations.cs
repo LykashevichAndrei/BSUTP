@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.IO;
 using Entities;
 
 namespace Data
 {
-    public class DataBase
+    public class DatabaseOperations
     {
-        private List<Student> _students=new List<Student>();
+        private List<Student> _students = new List<Student>();
         private List<Teacher> _teachers = new List<Teacher>();
         private List<Admin> _admins = new List<Admin>();
-        public DataBase()
+
+        public DatabaseOperations()
         {
             using (StreamReader file = File.OpenText(@"D:\\BSUTP\\Project\\Data\\Data\\Students.json"))
             {
@@ -53,10 +50,16 @@ namespace Data
             }
         }
 
-        public List<Student> GetStudents(string faculty,int groupNumber)
+        public List<Student> GetStudentsByFacultyGroup(string faculty, int groupNumber)
         {
-            List<Student> ActualStudents = _students.Where(n => n.Faculty == faculty && n.Group == groupNumber).ToList();
+            DatabaseStudent dBstudent = new DatabaseStudent();
+            var ActualStudents = (List<Student>)dBstudent.Get(faculty, groupNumber);
             return ActualStudents;
+        }
+
+        public void AddStudent(Student student)
+        {
+            DatabaseStudent dBstudent = new DatabaseStudent();
         }
     }
 }
