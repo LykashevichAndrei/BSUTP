@@ -12,7 +12,7 @@ namespace Service
     {
         private int _numberOfSeats=100;
      
-        DataBase dataBase = new DataBase();
+        DatabaseOperations dataBase = new DatabaseOperations();
         public void SettleStudent()
         {
             int temp = _numberOfSeats;

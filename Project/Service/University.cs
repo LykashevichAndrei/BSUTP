@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    class Universitu
+    class University
     {
-        DataBase data;
+        DatabaseOperations data;
         private readonly int _basicscholarship = 100;
         private readonly int _numberOfBudgetStydents = 50;
-        public Universitu()
+        public University()
         {
-            data = new DataBase();
+            data = new DatabaseOperations();
         }
         public void SetStudentsFormOfStudy()
         {

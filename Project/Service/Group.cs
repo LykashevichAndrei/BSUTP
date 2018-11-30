@@ -11,11 +11,11 @@ namespace Service
     public class Group
     {
         List<Student> students;
-        DataBase data;
+        DatabaseOperations data;
         public Group(string faculty,int group)
         {
-            data = new DataBase();
-            students = data.GetStudents(faculty, group);
+            data = new DatabaseOperations();
+            students = data.GetStudentsByFacultyGroup(faculty, group);
         }
     }
 }

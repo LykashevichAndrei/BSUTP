@@ -44,14 +44,14 @@
     <Compile Include="Group.cs" />
     <Compile Include="Hostel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Universitu.cs" />
+    <Compile Include="University.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{42297933-0b35-451e-940e-663ab539d472}</Project>
       <Name>Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\entities\Entities.csproj">
+    <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{96F17D35-2CB6-4B83-8AE9-607E32C8255E}</Project>
       <Name>Entities</Name>
     </ProjectReference>
