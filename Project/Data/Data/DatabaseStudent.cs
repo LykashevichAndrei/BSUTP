@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System.Collections;
 using Entities;
+using System.Collections.Generic;
 
 namespace Data
 {
@@ -10,11 +11,25 @@ namespace Data
 
         public void Add<Student>(Student student)
         {
-
+            try
+            {
+                db.Insert(student);
+            }
+            finally
+            {
+                db.Dispose();
+            }
         }
-        public void AddList<List>(List students)
+        public void AddList<Student>(List<Student> students)
         {
-
+            try
+            {
+                db.InsertAll(students);
+            }
+            finally
+            {
+                db.Dispose();
+            }
         }
         public void Update<Student>(Student student)
         {
@@ -31,7 +46,7 @@ namespace Data
         {
             try
             {
-                db.DeleteAll<Student>();
+                db.Delete<Student>(student);
             }
             finally
             {

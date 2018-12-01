@@ -62,19 +62,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseStudent.cs" />
+    <Compile Include="Data\DatabaseDiscipline.cs" />
+    <Compile Include="Data\DatabaseTeacher.cs" />
+    <Compile Include="Data\DatabaseStudent.cs" />
     <Compile Include="DatabaseOperations.cs" />
-    <Compile Include="IDatabase.cs" />
+    <Compile Include="Data\IDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Data\Admins.json" />
-    <None Include="Data\Disciplines.json" />
-    <None Include="Data\Students.json" />
-    <None Include="Data\Teachers.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

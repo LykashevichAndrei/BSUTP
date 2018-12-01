@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-using System.IO;
 using Entities;
 
 namespace Data
@@ -13,18 +11,6 @@ namespace Data
 
         public DatabaseOperations()
         {
-            using (StreamReader file = File.OpenText(@"D:\\BSUTP\\Project\\Data\\Data\\Students.json"))
-            {
-                _students = JsonConvert.DeserializeObject<List<Student>>(file.ReadToEnd());
-            }
-            using (StreamReader file = File.OpenText(@"D:\\BSUTP\\Project\\Data\\Data\\Teachers.json"))
-            {
-                _teachers = JsonConvert.DeserializeObject<List<Teacher>>(file.ReadToEnd());
-            }
-            using (StreamReader file = File.OpenText(@"D:\\BSUTP\\Project\\Data\\Data\\Admins.json"))
-            {
-                _admins = JsonConvert.DeserializeObject<List<Admin>>(file.ReadToEnd());
-            }
 
         }
 
@@ -59,7 +45,14 @@ namespace Data
 
         public void AddStudent(Student student)
         {
-            DatabaseStudent dBstudent = new DatabaseStudent();
+            DatabaseStudent db = new DatabaseStudent();
+            db.Add(student);
+        }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            DatabaseTeacher db = new DatabaseTeacher();
+            db.Add(teacher);
         }
     }
 }
