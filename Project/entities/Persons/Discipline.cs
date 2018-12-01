@@ -6,18 +6,35 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class Discipline
+    public class Discipline
     {
-        private List<Student> _students;
+        private string _name;
         private double _firstMark;
         private double _secondMark;
-        public Discipline(List<Student> students,double a,double b)
+        private List<Student> _students;
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
+        public Discipline() { }
+
+        public Discipline(List<Student> students, double a, double b)
         {
             this._firstMark = a;
             this._secondMark = b;
             this._students = students;
         }
-        public void SetMark(string name,string secondName,string patronymic,int mark)
+
+        public void SetMark(string name, string secondName, string patronymic, int mark)
         {
             var actualStudent = _students.First(n => n.Name == name && n.Patronymic == patronymic && n.Surname == secondName);
             actualStudent.AddMark(mark);
