@@ -1,30 +1,23 @@
 ﻿using Data;
 using Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service
 {
-    class University
+    public class University
     {
-        DatabaseOperations data;
         private readonly int _basicscholarship = 100;
         private readonly int _numberOfBudgetStydents = 50;
-        public University()
-        {
-            data = new DatabaseOperations();
-        }
+
         public void SetStudentsFormOfStudy()
         {
             int temp = _numberOfBudgetStydents;
-            List<Student> students = data.Students;
+            List<Student> students = Database.GetStudents();
             students.OrderBy(n => n.AverageBall);
             foreach (Student student in students)
             {
-                if (student.Status == "continuingeducation" && temp !=0)
+                if (student.Status == "continue education" && temp !=0)
                 {
                     student.InBudget = true;
                     temp--;
@@ -32,11 +25,10 @@ namespace Service
                 }
                 student.InBudget = false;
             }
-
         }
         public void SetStudentsScolarship()
         {
-            List<Student> students = data.Students;
+            List<Student> students = Database.GetStudents();
             foreach (Student student in students)
             {
                 double coefficient = 0;
@@ -53,11 +45,7 @@ namespace Service
                     student.Scholarship = _basicscholarship * coefficient;
                 }
             }
-
-        }
-        public List<Student> FindStudents(string secondName)
-        {
-            return data.Students.Where(n => n.Surname == secondName).ToList();
+            Database.Update(students);
         }
     }
 }

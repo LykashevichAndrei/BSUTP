@@ -1,58 +1,26 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entities;
 
 namespace Data
 {
     public class DatabaseOperations
     {
-        private List<Student> _students = new List<Student>();
-        private List<Teacher> _teachers = new List<Teacher>();
-        private List<Admin> _admins = new List<Admin>();
-
-        public DatabaseOperations()
+        public List<Student> GetStudentByName(string name, string surname)
         {
-
+            return Database.GetStudents().Where(s => s.Name == name && s.Surname == surname).ToList();
         }
-
-        public List<Student> Students
-        {
-            get
-            {
-                return _students;
-            }
-        }
-        public List<Admin> Admins
-        {
-            get
-            {
-                return _admins;
-            }
-        }
-        public List<Teacher> Teachers
-        {
-            get
-            {
-                return _teachers;
-            }
-        }
-
         public List<Student> GetStudentsByFacultyGroup(string faculty, int groupNumber)
         {
-            DatabaseStudent dBstudent = new DatabaseStudent();
-            var ActualStudents = (List<Student>)dBstudent.Get(faculty, groupNumber);
-            return ActualStudents;
+            return Database.GetStudents().Where(s => s.Faculty == faculty && s.Group == groupNumber).ToList();
         }
-
-        public void AddStudent(Student student)
+        public List<Teacher> GetTeacherByFaculty(string faculty)
         {
-            DatabaseStudent db = new DatabaseStudent();
-            db.Add(student);
+            return Database.GetTeachers().Where(s => s.Faculty == faculty).ToList();
         }
-
-        public void AddTeacher(Teacher teacher)
+        public List<Discipline> GetDiscipline(string name)
         {
-            DatabaseTeacher db = new DatabaseTeacher();
-            db.Add(teacher);
+            return Database.GetDisciplines().Where(s => s.Name == name).ToList();
         }
     }
 }

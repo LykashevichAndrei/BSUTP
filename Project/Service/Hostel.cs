@@ -12,11 +12,10 @@ namespace Service
     {
         private int _numberOfSeats=100;
      
-        DatabaseOperations dataBase = new DatabaseOperations();
         public void SettleStudent()
         {
             int temp = _numberOfSeats;
-            List<Student> students = dataBase.Students;
+            List<Student> students = Database.GetStudents();
             var priviligiesStudents = students.Where(n => n.Privileges == true);
             foreach (Student student in priviligiesStudents)
             {

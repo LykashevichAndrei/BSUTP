@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite;
+
 namespace Entities
 {
     public class Student : Person
@@ -11,7 +9,7 @@ namespace Entities
         private bool _privileges;
         private string _status;
         private bool _liveInSocialBehavior;
-        private string _specialty;
+        private string _speciality;
         private int _course;
         private bool _inBudget;
         private int _group;
@@ -111,6 +109,9 @@ namespace Entities
                 _averageBall = value;
             }
         }
+
+        public string Speciality { get; set; }
+        public int Year { get; set; }
 
         public void SetMark(int mark)
         {

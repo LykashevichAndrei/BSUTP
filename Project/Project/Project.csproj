@@ -90,6 +90,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{42297933-0b35-451e-940e-663ab539d472}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{96f17d35-2cb6-4b83-8ae9-607e32c8255e}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Service\Service.csproj">
       <Project>{4d7e3af0-393e-4524-8aa6-11eff72960ae}</Project>
       <Name>Service</Name>
