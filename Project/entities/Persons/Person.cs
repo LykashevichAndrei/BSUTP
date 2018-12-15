@@ -8,24 +8,14 @@ namespace Entities
 {
     public abstract class Person
     {
-        private string _name;
         private string _surname;
         private string _patronymic;
         private string _sex;
         private DateTime _dateofBirth;
         private string _faculty;
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
+        public string Name { get; set; }
+
         public string Surname
         {
             get

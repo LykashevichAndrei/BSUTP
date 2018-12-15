@@ -15,6 +15,7 @@ namespace Project
             SpecialityLabel.Text = student.Speciality;
             YearLabel.Text = student.Year.ToString();
             GroupLabel.Text = student.Group.ToString();
+            
 
             if (student.Privileges == true) PrivilegesLabel.Text = "Есть";
             else PrivilegesLabel.Text = "Нет";
