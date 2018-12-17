@@ -36,8 +36,6 @@ namespace Service
                     coefficient = 1;
                 if (student.AverageBall > 6 && student.AverageBall < 8.5)
                     coefficient = 1.4;
-                if (student.AverageBall > 6 && student.AverageBall < 8.5)
-                    coefficient = 1.4;
                 if (student.AverageBall > 8.5 && student.AverageBall < 10)
                     coefficient = 1.8;
                 if (student.InBudget==true)

@@ -39,5 +39,9 @@ namespace Entities
             var actualStudent = _students.First(n => n.Name == name && n.Patronymic == patronymic && n.Surname == secondName);
             actualStudent.AddMark(mark);
         }
+        public void PrintStatement()
+        {
+
+        }
     }
 }

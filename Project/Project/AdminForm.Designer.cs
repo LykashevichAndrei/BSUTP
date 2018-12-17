@@ -49,6 +49,7 @@
             this.Controls.Add(this.CreateStudentButton);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);
 
         }

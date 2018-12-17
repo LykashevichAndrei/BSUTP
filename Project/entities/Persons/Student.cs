@@ -15,6 +15,7 @@ namespace Entities
         private int _group;
         private double _averageBall;
         private double _scholarship;
+        private static int _basicscholarship = 100;
         private List<int> marks;
 
         public void AddMark(int mark)
@@ -55,7 +56,18 @@ namespace Entities
         {
             get
             {
-                return _scholarship;
+                double coefficient = 0;
+                if (AverageBall > 4 && AverageBall < 6)
+                    coefficient = 1;
+                if (AverageBall > 6 && AverageBall < 8.5)
+                    coefficient = 1.4;
+                if (AverageBall > 8.5 && AverageBall < 10)
+                    coefficient = 1.8;
+                if (InBudget == true)
+                {
+                    _scholarship = _basicscholarship * coefficient;
+                }
+                return Scholarship;
             }
             set
             {
@@ -122,6 +134,24 @@ namespace Entities
             marks.Add(mark);
             if (marks.Count == 5 && this._status!= "debtor")
                this._averageBall = marks.Average();
+        }
+        public static Student GetSetupStudent()
+        {
+            Student student = new Student();
+            student.AverageBall = 8;
+            student.Date = DateTime.Now;
+            student.Faculty = "RFiKT";
+            student.Group = 6;
+            student.InBudget = true;
+            student.LiveInSocialBehavior = false;
+            student.Name = "Andrei";
+            student.Patronymic = "Evginievich";
+            student.Sex = "male";
+            student.Surname = "Lukashevich";
+            student.Privileges = false;
+            student._scholarship = 100;
+            student._course = 3;
+            return student;
         }
     }
 }
