@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataBase.SQLiteRepositories
+namespace DataBase
 {
-    class SQLiteDisciplinesRepository : IRepository<Discipline>
+    public class SQLiteDisciplinesRepository : IRepository<Discipline>
     {
         private bool disposed = false;
         private DisciplinesContext db;

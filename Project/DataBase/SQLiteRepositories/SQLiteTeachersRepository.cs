@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataBase.SQLiteRepositories
+namespace DataBase
 {
-    class SQLiteTeachersRepository : IRepository<Teacher>
+    public class SQLiteTeachersRepository : IRepository<Teacher>
     {
         private bool disposed = false;
         private TeachersContext db;
