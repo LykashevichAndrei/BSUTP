@@ -17,14 +17,22 @@ namespace Project
         public Discipline()
         {
             InitializeComponent();
+            listBox1.Items.AddRange(/*список группы*/);
+            listBox2.Items.AddRange(/*список группы*/);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach(Student el in listbox1)
-            {
+        }
 
-            }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

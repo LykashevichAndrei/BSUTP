@@ -1,4 +1,4 @@
-﻿using Data;
+﻿//using DataBase;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,8 @@ namespace Service
         public void SettleStudent()
         {
             int temp = _numberOfSeats;
-            List<Student> students = Database.GetStudents();
+            List<Student> students = new List<Student>();
+              //  DataDase.GetStudents();
             var priviligiesStudents = students.Where(n => n.Privileges == true);
             foreach (Student student in priviligiesStudents)
             {

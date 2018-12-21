@@ -1,4 +1,4 @@
-﻿using Data;
+﻿//using Data;
 using Entities;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,8 @@ namespace Service
         public void SetStudentsFormOfStudy()
         {
             int temp = _numberOfBudgetStydents;
-            List<Student> students = Database.GetStudents();
+            List<Student> students = new List<Student>();
+                //Database.GetStudents();
             students.OrderBy(n => n.AverageBall);
             foreach (Student student in students)
             {
@@ -26,7 +27,7 @@ namespace Service
                 student.InBudget = false;
             }
         }
-        public void SetStudentsScolarship()
+       /* public void SetStudentsScolarship()
         {
             List<Student> students = Database.GetStudents();
             foreach (Student student in students)
@@ -42,8 +43,9 @@ namespace Service
                 {
                     student.Scholarship = _basicscholarship * coefficient;
                 }
-            }
-            Database.Update(students);
-        }
+            }*/
+           // Database.Update(students);
+        //}
     }
 }
+

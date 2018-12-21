@@ -16,6 +16,7 @@ namespace Project
         public CreateNewStudent()
         {
             InitializeComponent();
+           // listBox1.Items.AddRange(/*лист факультетов*/);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
