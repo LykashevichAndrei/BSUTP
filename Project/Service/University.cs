@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    class University
+    public class University
     {
+
     }
 }
