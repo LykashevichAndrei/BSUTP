@@ -17,8 +17,8 @@ namespace Project
         public Discipline()
         {
             InitializeComponent();
-            listBox1.Items.AddRange(/*список группы*/);
-            listBox2.Items.AddRange(/*список группы*/);
+            //listBox1.Items.AddRange(/*список группы*/);
+            //listBox2.Items.AddRange(/*список группы*/);
         }
 
         private void button1_Click(object sender, EventArgs e)

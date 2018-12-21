@@ -2,14 +2,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataBase
 {
-    public class StudentsContext : DbContext
+    public class AdminsContext : DbContext
     {
         public DbSet<Admin> Admins { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=./StudentsDataBase.db");
+            optionsBuilder.UseSqlite("Data Source=./AdminsDataBase.db");
         }
     }
 }

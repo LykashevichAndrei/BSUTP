@@ -4,43 +4,44 @@ using System.Collections.Generic;
 
 namespace DataBase
 {
-    public class SQLiteAdminsRepository : IRepository<Admin>
+    public class SQLiteStudentsRepository : IRepository<Student>
     {
         private bool disposed = false;
-        
-        public SQLiteAdminsRepository(StudentsContext db)
+        private StudentsContext db;
+
+        public SQLiteStudentsRepository(StudentsContext db)
         {
             this.db = db;
         }
 
-        public StudentsContext db { get; set; }
+        DbContext IRepository<Student>.DB { get => db; set => db = (StudentsContext)value; }
 
-        public IEnumerable<Admin> GetList()
+        public IEnumerable<Student> GetList()
         {
-            return db.Admins;
+            return db.Students;
         }
 
-        public Admin Get(int id)
+        public Student Get(int id)
         {
-            return db.Admins.Find(id);
+            return db.Students.Find(id);
         }
 
-        public void Create(Admin item)
+        public void Create(Student item)
         {
-            db.Admins.Add(item);
+            db.Students.Add(item);
         }
 
-        public void Update(Admin item)
+        public void Update(Student item)
         {
             db.Entry(item).State = EntityState.Modified;
         }
 
         public void Delete(int id)
         {
-            var account = db.Admins.Find(id);
+            var account = db.Students.Find(id);
             if (account != null)
             {
-                db.Admins.Remove(account);
+                db.Students.Remove(account);
             }
         }
 

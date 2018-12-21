@@ -7,7 +7,7 @@ namespace DataBase
     {
         
         private bool disposed = false;
-        private StudentsContext db = new StudentsContext();
+        private AdminsContext db = new AdminsContext();
         private IRepository<Admin> _admins;
 
         public IRepository<Admin> Accounts
