@@ -1,33 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
-using Entities;
 
 namespace Project
 {
     public partial class StudentForm : Form
     {
-        public StudentForm(Student student)
+        public StudentForm()
         {
             InitializeComponent();
-            NameLabel.Text = student.Name + " " + student.Surname;
-            StatusLabel.Text = student.Status;
-            FacultyLabel.Text = student.Faculty;
-            SpecialityLabel.Text = student.Speciality;
-            YearLabel.Text = student.Year.ToString();
-            GroupLabel.Text = student.Group.ToString();
-            
-
-            if (student.Privileges == true) PrivilegesLabel.Text = "Есть";
-            else PrivilegesLabel.Text = "Нет";
-
-            if (student.LiveInSocialBehavior == true) LiveInSBLabel.Text = "Есть";
-            else LiveInSBLabel.Text = "Нет";
-
-            if (student.InBudget == true) BudgetLabel.Text = "Да";
-            else BudgetLabel.Text = "Нет";
-            ///private double _averageBall;
-            ///private double _scholarship;
-            ///List<int> marks;
         }
 
         private void NameLabelText_Click(object sender, EventArgs e)

@@ -1,5 +1,4 @@
-﻿using Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,16 +12,14 @@ namespace Project
 {
     public partial class AdminForm : Form
     {
-        public AdminForm(Admin admin)
+        public AdminForm()
         {
             InitializeComponent();
         }
 
         private void CreateStudentButton_Click(object sender, EventArgs e)
         {
-            Show();
-            CreateNewStudent s = new CreateNewStudent();
-            s.Show();
+            
         }
 
         private void AdminForm_Load(object sender, EventArgs e)

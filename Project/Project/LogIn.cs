@@ -26,14 +26,14 @@ namespace Project
         private void StudentButton_Click(object sender, EventArgs e)
         {
             Hide();            
-            StudentForm student = new StudentForm(Entities.Student.GetSetupStudent());            
+            StudentForm student = new StudentForm();            
             student.Show();
         }
 
         private void AdminButton_Click_1(object sender, EventArgs e)
         {
             Hide();
-            AdminForm student = new AdminForm(Entities.Admin.GetSetUpAdmit());
+            AdminForm student = new AdminForm();
             student.Show();
         }
     }

@@ -1,5 +1,4 @@
-﻿using Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +10,6 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    //private List<Student> listbox1 = new List<Student>();
     public partial class Discipline : Form
     {
         public Discipline()
@@ -31,6 +29,11 @@ namespace Project
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
