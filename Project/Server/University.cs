@@ -6,5 +6,6 @@ namespace Server
 {
     class University
     {
+
     }
 }

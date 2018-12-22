@@ -7,23 +7,17 @@ using DataBase;
 
 namespace Server
 {
-    internal class Repository
+    internal static class Repository
     {
-        public List<Admin> _admins;
-        public List<Discipline> _disciplines;
-        public List<Student> _students;
-        public List<Teacher> _teachers;
-        public Repository()
-        {
-            Lists BD = new Lists();
-            _admins = BD.admins;
-            _disciplines = BD.disciplines;
-            _students = BD.students;
-            _teachers = BD.teachers;
-        }
-        public List<Admin> GetAdmins() => _admins;
-        public List<Discipline> GetDisciplines() => _disciplines;
-        public List<Student> GetStudents() => _students;
-        public List<Teacher> GetTeachers() => _teachers;
+        private static Lists BD = new Lists();
+        private static List<Admin> _admins = BD.admins;
+        private static List<Discipline> _disciplines = BD.disciplines;
+        private static List<Student> _students = BD.students;
+        private static List<Teacher> _teachers = BD.teachers;
+
+        public static List<Admin> GetAdmins() => _admins;
+        public static List<Discipline> GetDisciplines() => _disciplines;
+        public static List<Student> GetStudents() => _students;
+        public static List<Teacher> GetTeachers() => _teachers;
     }
 }

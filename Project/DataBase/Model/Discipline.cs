@@ -8,5 +8,8 @@ namespace DataBase
     {
         public int DisciplineId { get; set; }
         public string _Name { get; set; }
+        public Teacher lecturer { get; set; } = null;
+        public double firstMark;
+        public double secondMark;
     }
 }
