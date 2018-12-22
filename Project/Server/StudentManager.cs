@@ -8,7 +8,7 @@ namespace Server
 {
     class StudentManager
     {
-        public List<Student> _students = Repository.GetStudents();
+        public static List<Student> _students = Repository.GetStudents();
         private static int _baseScolarship = 100;
         public void SetStudentScolarship()
         {
@@ -83,6 +83,14 @@ namespace Server
                 }
             }
 
+        }
+        public static void AddStudent(string name,string surname,string facultie)
+        {
+            Student s = new Student();
+            s._Name = name;
+            s._Surname = surname;
+            s._Faculty = facultie;
+            _students.Add(s);
         }
     }
 }

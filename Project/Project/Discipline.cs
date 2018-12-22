@@ -12,11 +12,12 @@ namespace Project
 {
     public partial class Discipline : Form
     {
+        Student student;
         public Discipline()
         {
             InitializeComponent();
-            //listBox1.Items.AddRange(/*список группы*/);
-            //listBox2.Items.AddRange(/*список группы*/);
+            listBox1.Items.AddRange(Repositore.GetStudents());
+            listBox2.Items.AddRange(Repositore.GetStudents());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,15 +26,20 @@ namespace Project
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            student = listBox1.SelectedValue;
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            student = listBox2.SelectedValue;
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            label1.Text = student.AverageBall;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

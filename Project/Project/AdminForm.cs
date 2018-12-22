@@ -19,7 +19,9 @@ namespace Project
 
         private void CreateStudentButton_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            CreateNewStudent NewStudentForm = new CreateNewStudent();
+            NewStudentForm.Show();
         }
 
         private void AdminForm_Load(object sender, EventArgs e)

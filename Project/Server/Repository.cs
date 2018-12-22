@@ -19,5 +19,14 @@ namespace Server
         public static List<Discipline> GetDisciplines() => _disciplines;
         public static List<Student> GetStudents() => _students;
         public static List<Teacher> GetTeachers() => _teachers;
+        public static List<string> Faculties = new List<string>();
+        public static List<string> GetFaculties()
+        {
+            Faculties.Add("RFIKT");
+            Faculties.Add("FPM");
+            Faculties.Add("FSK");
+            Faculties.Add("IB");
+            return Faculties;
+        }
     }
 }
