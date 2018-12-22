@@ -20,6 +20,15 @@ namespace Server
                 }
             }
         }
-
+        public void SetCoefs(Discipline disc, double fmark)
+        {
+            if (fmark < 1)
+            {
+                disc.firstMark = fmark;
+                disc.secondMark = (1 - fmark);
+            }
+            else
+                throw new ArgumentOutOfRangeException();
+        }
     }
 }

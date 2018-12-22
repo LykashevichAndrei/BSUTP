@@ -17,5 +17,6 @@ namespace DataBase
         public bool _IsInABudget { get; set; }
         public bool _IsDebtor { get; set; } = false;
         public bool _IsInAacademyVacation { get; set; } = false;
+        public Teacher _teacher { get; set; }
     }
 }

@@ -12,11 +12,12 @@ namespace Server
         private static int _baseScolarship = 100;
         public void SetStudentScolarship()
         {
-            foreach(Student student in _students)
+            foreach (Student student in _students)
             {
                 student._Scolarship = _baseScolarship * GetCoef(student);
             }
         }
+
         private double GetCoef(Student student)
         {
             if (student._AverageBall > 4 && student._AverageBall < 6)
@@ -28,16 +29,18 @@ namespace Server
             else
                 return 0;
         }
+
         public void SetAverageBall()
         {
-            foreach(Student el in _students)
+            foreach (Student el in _students)
             {
-                if(el.Marks.Count==5)
+                if (el.Marks.Count == 5)
                 {
                     el._AverageBall = el.Marks.Average();
                 }
             }
         }
+
         public void GetAcadem(Student student)
         {
             student._IsInAacademyVacation = true;
@@ -50,18 +53,31 @@ namespace Server
             if (mark < 4)
                 student._IsDebtor = true;
         }
+
+        public void SetTeacher(Student student, Teacher teach)
+        {
+            student._teacher = teach;
+            teach._students.Add(student);
+        }
+
+        public List<Student> FindBySurname(string surname)
+        {
+            var res = _students.Where(n => n._Surname.Contains(surname));
+            return res.ToList();
+        }
+
         public void SetStudentsStatus()
         {
             int budgetPlaces = 50;
             var sortedStudents = _students.OrderBy(n => n._AverageBall).ToArray();
-            for(int i=0;i<budgetPlaces;i++)
+            for (int i = 0; i < budgetPlaces; i++)
             {
                 sortedStudents[i]._IsInABudget = true;
             }
             int temp = sortedStudents.Count() - budgetPlaces;
-            if(temp>=0)
+            if (temp >= 0)
             {
-                for(int i=budgetPlaces;i< sortedStudents.Count();i++)
+                for (int i = budgetPlaces; i < sortedStudents.Count(); i++)
                 {
                     sortedStudents[i]._IsInABudget = false;
                 }

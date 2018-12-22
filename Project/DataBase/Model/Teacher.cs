@@ -10,5 +10,6 @@ namespace DataBase
         public string _Name { get; set; }
         public string _Surname { get; set; }
         public List<Discipline> _disciplinesTaught;
+        public List<Student> _students;
     }
 }
